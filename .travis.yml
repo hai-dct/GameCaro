@@ -16,4 +16,5 @@ xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
 script:
     - xcodebuild clean build -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme GameCaro-DEV CODE_SIGNING_REQUIRED=NO
 install:
+    - set -o pipefail
     - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
