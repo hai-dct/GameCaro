@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CaroCell" customModule="GameCaro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="137"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="137"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-6H-waP">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="137"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5FV-6H-waP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="40G-MB-uKz"/>
+                <constraint firstAttribute="trailing" secondItem="5FV-6H-waP" secondAttribute="trailing" id="KW4-Pz-mmI"/>
+                <constraint firstItem="5FV-6H-waP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="r1l-lc-FNP"/>
+                <constraint firstAttribute="bottom" secondItem="5FV-6H-waP" secondAttribute="bottom" id="rk2-2N-hvg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="205" height="137"/>
+            <connections>
+                <outlet property="tagLabel" destination="5FV-6H-waP" id="RXJ-ti-kWj"/>
+            </connections>
+            <point key="canvasLocation" x="261.60000000000002" y="193.85307346326837"/>
+        </collectionViewCell>
+    </objects>
+</document>
