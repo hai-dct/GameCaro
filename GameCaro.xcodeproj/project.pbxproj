@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42858C228B8B4F27564EB03F /* Pods_GameCaroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */; };
+		54DD606AD34099F06F992CA2 /* Pods_GameCaroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */; };
 		A5CF6A7B21AA446F0086AFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6A7A21AA446F0086AFFC /* AppDelegate.swift */; };
 		A5CF6A8221AA446F0086AFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6A8121AA446F0086AFFC /* Assets.xcassets */; };
 		A5CF6A8521AA446F0086AFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6A8321AA446F0086AFFC /* LaunchScreen.storyboard */; };
@@ -21,6 +23,7 @@
 		A5CF6ABB21AADDE40086AFFC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AB921AADDE40086AFFC /* MenuViewController.swift */; };
 		A5CF6ABC21AADDE40086AFFC /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6ABA21AADDE40086AFFC /* MenuViewController.xib */; };
 		A5CF6ABF21AAE38D0086AFFC /* camnang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6ABE21AAE38D0086AFFC /* camnang.mp3 */; };
+		EC49304E7047B60036A69B01 /* Pods_GameCaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22683178A3AB76E3A2C220DC /* Pods-GameCaroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.release.xcconfig"; sourceTree = "<group>"; };
+		2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE90330A5F70E626A24CEC2 /* Pods-GameCaroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F1E69B68FD1BF8216AA24D /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
+		803FAB9517B1608A6B95236A /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
+		92F703A6FB45D2B7218653FE /* Pods-GameCaroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5CF6A7721AA446F0086AFFC /* GameCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CF6A7A21AA446F0086AFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CF6A8121AA446F0086AFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +72,7 @@
 		A5CF6AB921AADDE40086AFFC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A5CF6ABA21AADDE40086AFFC /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		A5CF6ABE21AAE38D0086AFFC /* camnang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camnang.mp3; sourceTree = "<group>"; };
+		B598075012BBABABF55D4896 /* Pods-GameCaroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC49304E7047B60036A69B01 /* Pods_GameCaro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54DD606AD34099F06F992CA2 /* Pods_GameCaroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42858C228B8B4F27564EB03F /* Pods_GameCaroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52227BADC0326927CAC0DB78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */,
+				2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */,
+				524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A5CF6A6E21AA446F0086AFFC = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,8 @@
 				A5CF6A8E21AA44700086AFFC /* GameCaroTests */,
 				A5CF6A9921AA44700086AFFC /* GameCaroUITests */,
 				A5CF6A7821AA446F0086AFFC /* Products */,
+				ECBF3345B1F711064A0A530D /* Pods */,
+				52227BADC0326927CAC0DB78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +221,19 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		ECBF3345B1F711064A0A530D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54F1E69B68FD1BF8216AA24D /* Pods-GameCaro.debug.xcconfig */,
+				803FAB9517B1608A6B95236A /* Pods-GameCaro.release.xcconfig */,
+				3EE90330A5F70E626A24CEC2 /* Pods-GameCaroTests.debug.xcconfig */,
+				22683178A3AB76E3A2C220DC /* Pods-GameCaroTests.release.xcconfig */,
+				B598075012BBABABF55D4896 /* Pods-GameCaroUITests.debug.xcconfig */,
+				92F703A6FB45D2B7218653FE /* Pods-GameCaroUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5CF6A9F21AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaro" */;
 			buildPhases = (
+				821904228C6B7687EE4FDA9E /* [CP] Check Pods Manifest.lock */,
 				A5CF6A7321AA446F0086AFFC /* Sources */,
 				A5CF6A7421AA446F0086AFFC /* Frameworks */,
 				A5CF6A7521AA446F0086AFFC /* Resources */,
@@ -218,6 +259,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5CF6AA221AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroTests" */;
 			buildPhases = (
+				3C3A38E6EFC60629B364517F /* [CP] Check Pods Manifest.lock */,
 				A5CF6A8721AA44700086AFFC /* Sources */,
 				A5CF6A8821AA44700086AFFC /* Frameworks */,
 				A5CF6A8921AA44700086AFFC /* Resources */,
@@ -236,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5CF6AA521AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroUITests" */;
 			buildPhases = (
+				28F51936645008D2D508B386 /* [CP] Check Pods Manifest.lock */,
 				A5CF6A9221AA44700086AFFC /* Sources */,
 				A5CF6A9321AA44700086AFFC /* Frameworks */,
 				A5CF6A9421AA44700086AFFC /* Resources */,
@@ -322,6 +365,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F51936645008D2D508B386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3A38E6EFC60629B364517F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821904228C6B7687EE4FDA9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5CF6A7321AA446F0086AFFC /* Sources */ = {
@@ -498,6 +610,7 @@
 		};
 		A5CF6AA021AA44700086AFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F1E69B68FD1BF8216AA24D /* Pods-GameCaro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +629,7 @@
 		};
 		A5CF6AA121AA44700086AFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803FAB9517B1608A6B95236A /* Pods-GameCaro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +648,7 @@
 		};
 		A5CF6AA321AA44700086AFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE90330A5F70E626A24CEC2 /* Pods-GameCaroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -555,6 +670,7 @@
 		};
 		A5CF6AA421AA44700086AFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22683178A3AB76E3A2C220DC /* Pods-GameCaroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +692,7 @@
 		};
 		A5CF6AA621AA44700086AFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B598075012BBABABF55D4896 /* Pods-GameCaroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -596,6 +713,7 @@
 		};
 		A5CF6AA721AA44700086AFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F703A6FB45D2B7218653FE /* Pods-GameCaroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
