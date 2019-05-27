@@ -46,11 +46,9 @@ final class CaroViewModel {
 
     func getMaxPoint() -> Int {
         var max = 0
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if max < evalData[i][j] {
-                    max = evalData[i][j]
-                }
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn where max < evalData[row][col] {
+                max = evalData[row][col]
             }
         }
         return max
@@ -60,6 +58,7 @@ final class CaroViewModel {
 extension CaroViewModel {
 
     func viewModelForItem(at indexPath: IndexPath) -> CaroCellViewModel {
+        var i = 0
         let result = getColumAndRow(from: indexPath)
         let rawValue = data[result.row][result.column]
         guard let option = Option(rawValue: rawValue) else {
@@ -91,41 +90,39 @@ extension CaroViewModel {
     private func evalRow(option: Option) {
         var dT = 0, dP = 0 // Đếm bên trái ô (i,j) trống, đếm bên phải ô (i,j) trống
         var jT: Int, jP: Int
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] == Option.none.rawValue {
-                    jT = j - 1 // Ô bên trái ij
-                    dT = 0 // Đếm bên trái các <Option> liên tục
-                    while jT >= 0 && data[i][jT] == option.rawValue {
-                        dT += 1
-                        jT -= 1
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn where data[row][col] == Option.none.rawValue {
+                jT = col - 1 // Ô bên trái ij
+                dT = 0 // Đếm bên trái các <Option> liên tục
+                while jT >= 0 && data[row][jT] == option.rawValue {
+                    dT += 1
+                    jT -= 1
+                }
+                dP = 0
+                jP = col + 1
+                while jP < numberColumn && data[row][jP] == option.rawValue { // Đếm bên phải các <Option> liên tục
+                    dP += 1
+                    jP += 1
+                }
+                // Đếm xong cho điểm
+                if dT + dP >= 4 {
+                    evalData[row][col] = option == playerOption ? 90 : 95
+                } else if dT + dP == 3 { // Đủ 3
+                    // Trống 2 đầu
+                    if data[row][jT] == Option.none.rawValue && data[row][jP] == Option.none.rawValue {
+                        evalData[row][col] += option == playerOption ? 50 : 55
+                    } else if jT <= 0 || data[row][jT] == option.opsite.rawValue {
+                        // Đụng biên trái hay bên trái bị chặn
+                        evalData[row][col] += option == playerOption ? 10 : 15
+                    } else if jP >= numberColumn || data[row][jP] == option.opsite.rawValue {
+                        // Đụng biên phải hay bên phải bị chặn
+                        evalData[row][col] += option == .xman ? 10 : 15
                     }
-                    dP = 0
-                    jP = j + 1
-                    while jP < numberColumn && data[i][jP] == option.rawValue { // Đếm bên phải các <Option> liên tục
-                        dP += 1
-                        jP += 1
-                    }
-                    // Đếm xong cho điểm
-                    if dT + dP >= 4 {
-                        evalData[i][j] = option == playerOption ? 90 : 95
-                    } else if dT + dP == 3 { // Đủ 3
-                        // Trống 2 đầu
-                        if data[i][jT] == Option.none.rawValue && data[i][jP] == Option.none.rawValue {
-                            evalData[i][j] += option == playerOption ? 50 : 55
-                        } else if jT <= 0 || data[i][jT] == option.opsite.rawValue {
-                            // Đụng biên trái hay bên trái bị chặn
-                            evalData[i][j] += option == playerOption ? 10 : 15
-                        } else if jP >= numberColumn || data[i][jP] == option.opsite.rawValue {
-                            // Đụng biên phải hay bên phải bị chặn
-                            evalData[i][j] += option == .xman ? 10 : 15
-                        }
-                    } else if option != playerOption {
-                        if dT + dP == 2 {
-                            evalData[i][j] += 5
-                        } else if dT + dP == 1{
-                            evalData[i][j] += 1
-                        }
+                } else if option != playerOption {
+                    if dT + dP == 2 {
+                        evalData[row][col] += 5
+                    } else if dT + dP == 1 {
+                        evalData[row][col] += 1
                     }
                 }
             }
@@ -134,41 +131,39 @@ extension CaroViewModel {
 
     private func evalCol(option: Option) {
         var demT: Int, demD: Int, iT: Int, iD: Int // Trên và dưới
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] == Option.none.rawValue { // Đánh gia ô trống
-                    demT = 0
-                    iT = i - 1
-                    while iT >= 0 && data[iT][j] == option.rawValue {
-                        demT += 1
-                        iT -= 1 // Đi lên
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn where data[row][col] == Option.none.rawValue { // Đánh gia ô trống
+                demT = 0
+                iT = row - 1
+                while iT >= 0 && data[iT][col] == option.rawValue {
+                    demT += 1
+                    iT -= 1 // Đi lên
+                }
+                demD = 0
+                iD = row + 1
+                while iD < numberColumn && data[iD][col] == option.rawValue {
+                    demD += 1
+                    iD += 1 // Đi lên
+                }
+                // Đếm xong cho điểm
+                if demD + demT >= 4 {
+                    evalData[row][col] = option == playerOption ? 90 : 95
+                } else if demD + demT >= 3 { // Đủ 3
+                    if iT < 0 || data[iT][col] == option.opsite.rawValue {
+                        // Đụng biên trên hay bị chặn trên
+                        evalData[row][col] += option == playerOption ? 10 : 15
+                    } else if iD >= numberColumn || data[iD][col] == option.opsite.rawValue {
+                        // Đụng biên dưới hay bị chặn dưới
+                        evalData[row][col] += option == playerOption ? 10 : 15
+                    } else if data[iD][col] == Option.none.rawValue && data[iT][col] == Option.none.rawValue {
+                        // Trống 2 đầu
+                        evalData[row][col] += option == playerOption ? 50 : 55
                     }
-                    demD = 0
-                    iD = i + 1;
-                    while (iD < numberColumn && data[iD][j] == option.rawValue) {
-                        demD += 1
-                        iD += 1 // Đi lên
-                    }
-                    // Đếm xong cho điểm
-                    if demD + demT >= 4 {
-                        evalData[i][j] = option == playerOption ? 90 : 95
-                    } else if demD + demT >= 3 { // Đủ 3
-                        if iT < 0 || data[iT][j] == option.opsite.rawValue {
-                            // Đụng biên trên hay bị chặn trên
-                            evalData[i][j] += option == playerOption ? 10 : 15
-                        } else if iD >= numberColumn || data[iD][j] == option.opsite.rawValue {
-                            // Đụng biên dưới hay bị chặn dưới
-                            evalData[i][j] += option == playerOption ? 10 : 15
-                        } else if data[iD][j] == Option.none.rawValue && data[iT][j] == Option.none.rawValue {
-                            // Trống 2 đầu
-                            evalData[i][j] += option == playerOption ? 50 : 55
-                        }
-                    } else if option != playerOption {
-                        if demT + demD == 2 {
-                            evalData[i][j] += 5
-                        } else if demT + demD == 1{
-                            evalData[i][j] += 1
-                        }
+                } else if option != playerOption {
+                    if demT + demD == 2 {
+                        evalData[row][col] += 5
+                    } else if demT + demD == 1 {
+                        evalData[row][col] += 1
                     }
                 }
             }
@@ -177,48 +172,46 @@ extension CaroViewModel {
 
     private func evalDiagonalUp(option: Option) {
         var demL: Int, demX: Int, iL: Int, iX: Int, jL: Int, jX: Int
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] == Option.none.rawValue {
-                    // Đếm lên
-                    demL = 0
-                    iL = i - 1
-                    jL = j + 1
-                    while iL >= 0 && jL < numberColumn && data[iL][jL] == option.rawValue {
-                        demL += 1
-                        iL -= 1
-                        jL += 1
-                    }
-                    demX = 0
-                    iX = i + 1
-                    jX = j - 1
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn where data[row][col] == Option.none.rawValue {
+                // Đếm lên
+                demL = 0
+                iL = row - 1
+                jL = col + 1
+                while iL >= 0 && jL < numberColumn && data[iL][jL] == option.rawValue {
+                    demL += 1
+                    iL -= 1
+                    jL += 1
+                }
+                demX = 0
+                iX = row + 1
+                jX = col - 1
 
-                    while iX < numberColumn && jX >= 0 && data[iX][jX] == option.rawValue {
-                        demX += 1
-                        iX += 1
-                        jX -= 1
-                    }
+                while iX < numberColumn && jX >= 0 && data[iX][jX] == option.rawValue {
+                    demX += 1
+                    iX += 1
+                    jX -= 1
+                }
 
-                    // Đếm xong cho điểm
-                    if demX + demL >= 4 {
-                        evalData[i][j] = option == playerOption ? 90 : 95
-                    } else if demX + demL == 3 { // Đủ 3
-                        if iL < 0 || jL >= numberColumn || data[iL][jL] == option.opsite.rawValue {
-                            // Đụng biên trên hoặc chăn trên
-                            evalData[i][j] = option == playerOption ? 10 : 15
-                        } else if iX >= numberColumn || jX < 0 || data[iX][jX] == option.opsite.rawValue {
-                            // Đụng biên dưới hoặc chặn dưới
-                            evalData[i][j] = option == playerOption ? 10 : 15
-                        } else if data[iL][jL] == Option.none.rawValue && data[iX][jX] == Option.none.rawValue {
-                            // Hai đầu trống
-                            evalData[i][j] = option == playerOption ? 50 : 55
-                        }
-                    } else if option != playerOption {
-                        if demX + demL == 2 {
-                            evalData[i][j] += 5
-                        } else if demX + demL == 1{
-                            evalData[i][j] += 1
-                        }
+                // Đếm xong cho điểm
+                if demX + demL >= 4 {
+                    evalData[row][col] = option == playerOption ? 90 : 95
+                } else if demX + demL == 3 { // Đủ 3
+                    if iL < 0 || jL >= numberColumn || data[iL][jL] == option.opsite.rawValue {
+                        // Đụng biên trên hoặc chăn trên
+                        evalData[row][col] = option == playerOption ? 10 : 15
+                    } else if iX >= numberColumn || jX < 0 || data[iX][jX] == option.opsite.rawValue {
+                        // Đụng biên dưới hoặc chặn dưới
+                        evalData[row][col] = option == playerOption ? 10 : 15
+                    } else if data[iL][jL] == Option.none.rawValue && data[iX][jX] == Option.none.rawValue {
+                        // Hai đầu trống
+                        evalData[row][col] = option == playerOption ? 50 : 55
+                    }
+                } else if option != playerOption {
+                    if demX + demL == 2 {
+                        evalData[row][col] += 5
+                    } else if demX + demL == 1 {
+                        evalData[row][col] += 1
                     }
                 }
             }
@@ -227,49 +220,47 @@ extension CaroViewModel {
 
     private func evalDiagonalDown(option: Option) {
         var demL: Int, demX: Int, iL: Int, iX: Int, jL: Int, jX: Int
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] == Option.none.rawValue {
-                    // Đếm lên
-                    demL = 0
-                    iL = i - 1
-                    jL = j - 1
-                    while iL >= 0 && jL >= 0 && data[iL][jL] == option.rawValue {
-                        demL += 1
-                        iL -= 1
-                        jL -= 1
-                    }
-                    // Đếm xuống
-                    demX = 0
-                    iX = i + 1
-                    jX = j + 1
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn where data[row][col] == Option.none.rawValue {
+                // Đếm lên
+                demL = 0
+                iL = row - 1
+                jL = col - 1
+                while iL >= 0 && jL >= 0 && data[iL][jL] == option.rawValue {
+                    demL += 1
+                    iL -= 1
+                    jL -= 1
+                }
+                // Đếm xuống
+                demX = 0
+                iX = row + 1
+                jX = col + 1
 
-                    while iX < numberColumn && jX < numberColumn && data[iX][jX] == option.rawValue {
-                        demX += 1
-                        iX += 1
-                        jX += 1
-                    }
+                while iX < numberColumn && jX < numberColumn && data[iX][jX] == option.rawValue {
+                    demX += 1
+                    iX += 1
+                    jX += 1
+                }
 
-                    // Đếm xong cho điểm
-                    if demX + demL >= 4 {
-                        evalData[i][j] = option == playerOption ? 90 : 95
-                    } else if demX + demL == 3 { // Đủ 3
-                        if iL < 0 || jL < 0 || data[iL][jL] == option.opsite.rawValue {
-                            // Đụng biên trên hoặc chăn trên
-                            evalData[i][j] = option == playerOption ? 10 : 15
-                        } else if iX >= numberColumn || jX >= numberColumn || data[iX][jX] == option.opsite.rawValue {
-                            // Đụng biên dưới hoặc chặn dưới
-                            evalData[i][j] = option == playerOption ? 10 : 15
-                        } else if data[iL][jL] == Option.none.rawValue && data[iX][jX] == Option.none.rawValue {
-                            // Hai đầu trống
-                            evalData[i][j] = option == playerOption ? 50 : 55
-                        }
-                    } else if option != playerOption {
-                        if demX + demL == 2 {
-                            evalData[i][j] += 5
-                        } else if demX + demL == 1{
-                            evalData[i][j] += 1
-                        }
+                // Đếm xong cho điểm
+                if demX + demL >= 4 {
+                    evalData[row][col] = option == playerOption ? 90 : 95
+                } else if demX + demL == 3 { // Đủ 3
+                    if iL < 0 || jL < 0 || data[iL][jL] == option.opsite.rawValue {
+                        // Đụng biên trên hoặc chăn trên
+                        evalData[row][col] = option == playerOption ? 10 : 15
+                    } else if iX >= numberColumn || jX >= numberColumn || data[iX][jX] == option.opsite.rawValue {
+                        // Đụng biên dưới hoặc chặn dưới
+                        evalData[row][col] = option == playerOption ? 10 : 15
+                    } else if data[iL][jL] == Option.none.rawValue && data[iX][jX] == Option.none.rawValue {
+                        // Hai đầu trống
+                        evalData[row][col] = option == playerOption ? 50 : 55
+                    }
+                } else if option != playerOption {
+                    if demX + demL == 2 {
+                        evalData[row][col] += 5
+                    } else if demX + demL == 1 {
+                        evalData[row][col] += 1
                     }
                 }
             }
@@ -280,12 +271,12 @@ extension CaroViewModel {
     private func eval() {
         evalData = newData
         // 1. 0 điểm cho ô đã có và 1 điểm cho ô trống
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] != Option.none.rawValue {
-                    evalData[i][j] = 0
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn {
+                if data[row][col] != Option.none.rawValue {
+                    evalData[row][col] = 0
                 } else {
-                    evalData[i][j] = 1
+                    evalData[row][col] = 1
                 }
             }
         }
@@ -322,9 +313,9 @@ extension CaroViewModel {
     private func checkRow(option: Option) {
         guard !isGameOver, option != .none else { return }
         var dem = 0
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[i][j] == option.rawValue {
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn {
+                if data[row][col] == option.rawValue {
                     dem += 1
                     if dem == 5 {
                         isGameOver = true
@@ -340,9 +331,9 @@ extension CaroViewModel {
     private func checkColumn(option: Option) {
         guard !isGameOver, option != .none else { return }
         var dem = 0
-        for i in 0..<numberColumn {
-            for j in 0..<numberColumn {
-                if data[j][i] == option.rawValue {
+        for row in 0..<numberColumn {
+            for col in 0..<numberColumn {
+                if data[col][row] == option.rawValue {
                     dem += 1
                     if dem == 5 {
                         isGameOver = true
@@ -358,19 +349,17 @@ extension CaroViewModel {
     private func checkUp(option: Option) {
         guard !isGameOver, option != .none else { return }
         var dem = 0
-        for k in 4..<(2 * numberColumn - 1) {
-            for i in 0..<numberColumn {
-                for j in 0..<numberColumn {
-                    if i + j == k {
-                        if data[i][j] == option.rawValue {
-                            dem += 1
-                            if dem == 5 {
-                                isGameOver = true
-                                break
-                            }
-                        } else {
-                            dem = 0
+        for temp in 4..<(2 * numberColumn - 1) {
+            for row in 0..<numberColumn {
+                for col in 0..<numberColumn where row + col == temp {
+                    if data[row][col] == option.rawValue {
+                        dem += 1
+                        if dem == 5 {
+                            isGameOver = true
+                            break
                         }
+                    } else {
+                        dem = 0
                     }
                 }
             }
@@ -380,19 +369,17 @@ extension CaroViewModel {
     private func checkDown(option: Option) {
         guard !isGameOver, option != .none else { return }
         var dem = 0
-        for k in (1 - numberColumn)..<(numberColumn - 1) {
-            for i in 0..<numberColumn {
-                for j in 0..<numberColumn {
-                    if i - j == k {
-                        if data[i][j] == option.rawValue {
-                            dem += 1
-                            if dem == 5 {
-                                isGameOver = true
-                                break
-                            }
-                        } else {
-                            dem = 0
+        for temp in (1 - numberColumn)..<(numberColumn - 1) {
+            for row in 0..<numberColumn {
+                for col in 0..<numberColumn where row - col == temp {
+                    if data[row][col] == option.rawValue {
+                        dem += 1
+                        if dem == 5 {
+                            isGameOver = true
+                            break
                         }
+                    } else {
+                        dem = 0
                     }
                 }
             }
