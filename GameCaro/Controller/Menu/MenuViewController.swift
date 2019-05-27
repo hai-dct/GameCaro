@@ -16,7 +16,7 @@ final class MenuViewController: UIViewController {
     }
 
     @IBAction func playButtonTouchUpInside(_ sender: UIButton) {
-        let vc = CaroViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        let vc1 = CaroViewController()
+        navigationController?.pushViewController(vc1, animated: true)
     }
 }
