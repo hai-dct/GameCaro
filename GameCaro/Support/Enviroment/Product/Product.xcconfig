@@ -1,0 +1,14 @@
+//
+//  Dev.xcconfig
+//  GameCaro
+//
+//  Created by MBA0237P on 5/27/19.
+//  Copyright © 2019 Hai Nguyen H.P. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// App
+DISPLAY_NAME = [PRO] GameCaro
+PRODUCT_BUNDLE_IDENTIFIER = com.lion.GameCaro

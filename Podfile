@@ -7,6 +7,9 @@ target 'GameCaro' do
 
   # Pods for GameCaro
 
+  # Utils
+  pod 'SwiftLint', '~> 0.27' # A tool to enforce Swift style and conventions.
+
   target 'GameCaroTests' do
     inherit! :search_paths
     # Pods for testing
