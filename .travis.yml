@@ -1,4 +1,5 @@
 before_install:
+    - brew install rbenv
     - rbenv install 2.5.0
     - rbenv local 2.5.0
     - gem update --system
