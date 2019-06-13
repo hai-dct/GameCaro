@@ -1,0 +1,992 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42858C228B8B4F27564EB03F /* Pods_GameCaroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */; };
+		54DD606AD34099F06F992CA2 /* Pods_GameCaroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */; };
+		A5C24C84229BCF3F001ADD6F /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A5C24C82229BCF3F001ADD6F /* Staging.xcconfig */; };
+		A5C24C85229BCF3F001ADD6F /* Product.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A5C24C83229BCF3F001ADD6F /* Product.xcconfig */; };
+		A5CF6A7B21AA446F0086AFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6A7A21AA446F0086AFFC /* AppDelegate.swift */; };
+		A5CF6A8221AA446F0086AFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6A8121AA446F0086AFFC /* Assets.xcassets */; };
+		A5CF6A8521AA446F0086AFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6A8321AA446F0086AFFC /* LaunchScreen.storyboard */; };
+		A5CF6A9021AA44700086AFFC /* GameCaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6A8F21AA44700086AFFC /* GameCaroTests.swift */; };
+		A5CF6A9B21AA44700086AFFC /* GameCaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6A9A21AA44700086AFFC /* GameCaroUITests.swift */; };
+		A5CF6AAA21AA44B40086AFFC /* CaroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AA821AA44B40086AFFC /* CaroViewController.swift */; };
+		A5CF6AAB21AA44B40086AFFC /* CaroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6AA921AA44B40086AFFC /* CaroViewController.xib */; };
+		A5CF6AAE21AA46000086AFFC /* CaroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AAC21AA46000086AFFC /* CaroCell.swift */; };
+		A5CF6AAF21AA46000086AFFC /* CaroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6AAD21AA46000086AFFC /* CaroCell.xib */; };
+		A5CF6AB421AAC6040086AFFC /* CaroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AB321AAC6040086AFFC /* CaroViewModel.swift */; };
+		A5CF6AB621AACBC70086AFFC /* CaroCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AB521AACBC70086AFFC /* CaroCellViewModel.swift */; };
+		A5CF6ABB21AADDE40086AFFC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF6AB921AADDE40086AFFC /* MenuViewController.swift */; };
+		A5CF6ABC21AADDE40086AFFC /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6ABA21AADDE40086AFFC /* MenuViewController.xib */; };
+		A5CF6ABF21AAE38D0086AFFC /* camnang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5CF6ABE21AAE38D0086AFFC /* camnang.mp3 */; };
+		EC49304E7047B60036A69B01 /* Pods_GameCaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5CF6A8C21AA44700086AFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5CF6A6F21AA446F0086AFFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5CF6A7621AA446F0086AFFC;
+			remoteInfo = GameCaro;
+		};
+		A5CF6A9721AA44700086AFFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5CF6A6F21AA446F0086AFFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5CF6A7621AA446F0086AFFC;
+			remoteInfo = GameCaro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		098549998CE1D478660B6BCF /* Pods-GameCaro.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.staging.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.staging.xcconfig"; sourceTree = "<group>"; };
+		11095F1278DEF952E05115F1 /* Pods-GameCaroTests.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.product.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.product.xcconfig"; sourceTree = "<group>"; };
+		22683178A3AB76E3A2C220DC /* Pods-GameCaroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.release.xcconfig"; sourceTree = "<group>"; };
+		2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B18BB8E038A811237EC18B /* Pods-GameCaroUITests.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.product.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.product.xcconfig"; sourceTree = "<group>"; };
+		3EE90330A5F70E626A24CEC2 /* Pods-GameCaroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F1E69B68FD1BF8216AA24D /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
+		6839B42A5C268CCF7F23E448 /* Pods-GameCaroUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.staging.xcconfig"; sourceTree = "<group>"; };
+		71309815A8C7DCB277B09F17 /* Pods-GameCaro.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		73C17283D356B890987FD164 /* Pods-GameCaroTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.staging.xcconfig"; sourceTree = "<group>"; };
+		803FAB9517B1608A6B95236A /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
+		8067150EFA1D4FF3BE2F0A7C /* Pods-GameCaroTests.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroTests.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroTests/Pods-GameCaroTests.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		92F703A6FB45D2B7218653FE /* Pods-GameCaroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A106D4AAC1CE4EC4C4ABEC5D /* Pods-GameCaroUITests.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		A5C24C7E229BCEF1001ADD6F /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
+		A5C24C82229BCF3F001ADD6F /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		A5C24C83229BCF3F001ADD6F /* Product.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Product.xcconfig; sourceTree = "<group>"; };
+		A5CF6A7721AA446F0086AFFC /* GameCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CF6A7A21AA446F0086AFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5CF6A8121AA446F0086AFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5CF6A8421AA446F0086AFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5CF6A8621AA44700086AFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CF6A8B21AA44700086AFFC /* GameCaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CF6A8F21AA44700086AFFC /* GameCaroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCaroTests.swift; sourceTree = "<group>"; };
+		A5CF6A9121AA44700086AFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CF6A9621AA44700086AFFC /* GameCaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CF6A9A21AA44700086AFFC /* GameCaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCaroUITests.swift; sourceTree = "<group>"; };
+		A5CF6A9C21AA44700086AFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5CF6AA821AA44B40086AFFC /* CaroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaroViewController.swift; sourceTree = "<group>"; };
+		A5CF6AA921AA44B40086AFFC /* CaroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaroViewController.xib; sourceTree = "<group>"; };
+		A5CF6AAC21AA46000086AFFC /* CaroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaroCell.swift; sourceTree = "<group>"; };
+		A5CF6AAD21AA46000086AFFC /* CaroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaroCell.xib; sourceTree = "<group>"; };
+		A5CF6AB321AAC6040086AFFC /* CaroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaroViewModel.swift; sourceTree = "<group>"; };
+		A5CF6AB521AACBC70086AFFC /* CaroCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaroCellViewModel.swift; sourceTree = "<group>"; };
+		A5CF6AB921AADDE40086AFFC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A5CF6ABA21AADDE40086AFFC /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		A5CF6ABE21AAE38D0086AFFC /* camnang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camnang.mp3; sourceTree = "<group>"; };
+		B598075012BBABABF55D4896 /* Pods-GameCaroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaroUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaroUITests/Pods-GameCaroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9653765D02239EC1F843856 /* Pods-GameCaro.product.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.product.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.product.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5CF6A7421AA446F0086AFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC49304E7047B60036A69B01 /* Pods_GameCaro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A8821AA44700086AFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54DD606AD34099F06F992CA2 /* Pods_GameCaroTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A9321AA44700086AFFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42858C228B8B4F27564EB03F /* Pods_GameCaroUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52227BADC0326927CAC0DB78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51D589F4D6B17AB001E127D9 /* Pods_GameCaro.framework */,
+				2910CC17725002F9A679ACBC /* Pods_GameCaroTests.framework */,
+				524E48CD5A2F1AF10FD65563 /* Pods_GameCaroUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5C24C7F229BCF26001ADD6F /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				A5C24C7E229BCEF1001ADD6F /* Dev.xcconfig */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		A5C24C80229BCF2B001ADD6F /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+				A5C24C82229BCF3F001ADD6F /* Staging.xcconfig */,
+			);
+			path = Staging;
+			sourceTree = "<group>";
+		};
+		A5C24C81229BCF31001ADD6F /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				A5C24C83229BCF3F001ADD6F /* Product.xcconfig */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		A5C24C86229BD2BA001ADD6F /* Enviroment */ = {
+			isa = PBXGroup;
+			children = (
+				A5C24C80229BCF2B001ADD6F /* Staging */,
+				A5C24C81229BCF31001ADD6F /* Product */,
+				A5C24C7F229BCF26001ADD6F /* Dev */,
+			);
+			path = Enviroment;
+			sourceTree = "<group>";
+		};
+		A5CF6A6E21AA446F0086AFFC = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A7921AA446F0086AFFC /* GameCaro */,
+				A5CF6A8E21AA44700086AFFC /* GameCaroTests */,
+				A5CF6A9921AA44700086AFFC /* GameCaroUITests */,
+				A5CF6A7821AA446F0086AFFC /* Products */,
+				ECBF3345B1F711064A0A530D /* Pods */,
+				52227BADC0326927CAC0DB78 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A5CF6A7821AA446F0086AFFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A7721AA446F0086AFFC /* GameCaro.app */,
+				A5CF6A8B21AA44700086AFFC /* GameCaroTests.xctest */,
+				A5CF6A9621AA44700086AFFC /* GameCaroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5CF6A7921AA446F0086AFFC /* GameCaro */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A7A21AA446F0086AFFC /* AppDelegate.swift */,
+				A5CF6A8121AA446F0086AFFC /* Assets.xcassets */,
+				A5CF6AB121AAC5CC0086AFFC /* Controller */,
+				A5CF6A8321AA446F0086AFFC /* LaunchScreen.storyboard */,
+				A5CF6AB021AAC5AB0086AFFC /* Support */,
+			);
+			path = GameCaro;
+			sourceTree = "<group>";
+		};
+		A5CF6A8E21AA44700086AFFC /* GameCaroTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A8F21AA44700086AFFC /* GameCaroTests.swift */,
+				A5CF6A9121AA44700086AFFC /* Info.plist */,
+			);
+			path = GameCaroTests;
+			sourceTree = "<group>";
+		};
+		A5CF6A9921AA44700086AFFC /* GameCaroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A9A21AA44700086AFFC /* GameCaroUITests.swift */,
+				A5CF6A9C21AA44700086AFFC /* Info.plist */,
+			);
+			path = GameCaroUITests;
+			sourceTree = "<group>";
+		};
+		A5CF6AB021AAC5AB0086AFFC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6A8621AA44700086AFFC /* Info.plist */,
+				A5C24C86229BD2BA001ADD6F /* Enviroment */,
+				A5CF6ABD21AAE3800086AFFC /* Media */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A5CF6AB121AAC5CC0086AFFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6AB721AADDC10086AFFC /* Caro */,
+				A5CF6AB821AADDCE0086AFFC /* Menu */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A5CF6AB221AAC5DF0086AFFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6AAC21AA46000086AFFC /* CaroCell.swift */,
+				A5CF6AAD21AA46000086AFFC /* CaroCell.xib */,
+				A5CF6AB521AACBC70086AFFC /* CaroCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A5CF6AB721AADDC10086AFFC /* Caro */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6AA821AA44B40086AFFC /* CaroViewController.swift */,
+				A5CF6AB321AAC6040086AFFC /* CaroViewModel.swift */,
+				A5CF6AA921AA44B40086AFFC /* CaroViewController.xib */,
+				A5CF6AB221AAC5DF0086AFFC /* Cell */,
+			);
+			path = Caro;
+			sourceTree = "<group>";
+		};
+		A5CF6AB821AADDCE0086AFFC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6AB921AADDE40086AFFC /* MenuViewController.swift */,
+				A5CF6ABA21AADDE40086AFFC /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A5CF6ABD21AAE3800086AFFC /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF6ABE21AAE38D0086AFFC /* camnang.mp3 */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		ECBF3345B1F711064A0A530D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54F1E69B68FD1BF8216AA24D /* Pods-GameCaro.debug.xcconfig */,
+				803FAB9517B1608A6B95236A /* Pods-GameCaro.release.xcconfig */,
+				3EE90330A5F70E626A24CEC2 /* Pods-GameCaroTests.debug.xcconfig */,
+				22683178A3AB76E3A2C220DC /* Pods-GameCaroTests.release.xcconfig */,
+				B598075012BBABABF55D4896 /* Pods-GameCaroUITests.debug.xcconfig */,
+				92F703A6FB45D2B7218653FE /* Pods-GameCaroUITests.release.xcconfig */,
+				098549998CE1D478660B6BCF /* Pods-GameCaro.staging.xcconfig */,
+				71309815A8C7DCB277B09F17 /* Pods-GameCaro.debug-dev.xcconfig */,
+				F9653765D02239EC1F843856 /* Pods-GameCaro.product.xcconfig */,
+				73C17283D356B890987FD164 /* Pods-GameCaroTests.staging.xcconfig */,
+				8067150EFA1D4FF3BE2F0A7C /* Pods-GameCaroTests.debug-dev.xcconfig */,
+				11095F1278DEF952E05115F1 /* Pods-GameCaroTests.product.xcconfig */,
+				6839B42A5C268CCF7F23E448 /* Pods-GameCaroUITests.staging.xcconfig */,
+				A106D4AAC1CE4EC4C4ABEC5D /* Pods-GameCaroUITests.debug-dev.xcconfig */,
+				30B18BB8E038A811237EC18B /* Pods-GameCaroUITests.product.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5CF6A7621AA446F0086AFFC /* GameCaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5CF6A9F21AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaro" */;
+			buildPhases = (
+				821904228C6B7687EE4FDA9E /* [CP] Check Pods Manifest.lock */,
+				A5C24C87229BE6CD001ADD6F /* SwiftLint */,
+				A5CF6A7321AA446F0086AFFC /* Sources */,
+				A5CF6A7421AA446F0086AFFC /* Frameworks */,
+				A5CF6A7521AA446F0086AFFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameCaro;
+			productName = GameCaro;
+			productReference = A5CF6A7721AA446F0086AFFC /* GameCaro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5CF6A8A21AA44700086AFFC /* GameCaroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5CF6AA221AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroTests" */;
+			buildPhases = (
+				3C3A38E6EFC60629B364517F /* [CP] Check Pods Manifest.lock */,
+				A5CF6A8721AA44700086AFFC /* Sources */,
+				A5CF6A8821AA44700086AFFC /* Frameworks */,
+				A5CF6A8921AA44700086AFFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5CF6A8D21AA44700086AFFC /* PBXTargetDependency */,
+			);
+			name = GameCaroTests;
+			productName = GameCaroTests;
+			productReference = A5CF6A8B21AA44700086AFFC /* GameCaroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5CF6A9521AA44700086AFFC /* GameCaroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5CF6AA521AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroUITests" */;
+			buildPhases = (
+				28F51936645008D2D508B386 /* [CP] Check Pods Manifest.lock */,
+				A5CF6A9221AA44700086AFFC /* Sources */,
+				A5CF6A9321AA44700086AFFC /* Frameworks */,
+				A5CF6A9421AA44700086AFFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5CF6A9821AA44700086AFFC /* PBXTargetDependency */,
+			);
+			name = GameCaroUITests;
+			productName = GameCaroUITests;
+			productReference = A5CF6A9621AA44700086AFFC /* GameCaroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5CF6A6F21AA446F0086AFFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Hai Nguyen H.P.";
+				TargetAttributes = {
+					A5CF6A7621AA446F0086AFFC = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					A5CF6A8A21AA44700086AFFC = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A5CF6A7621AA446F0086AFFC;
+					};
+					A5CF6A9521AA44700086AFFC = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A5CF6A7621AA446F0086AFFC;
+					};
+				};
+			};
+			buildConfigurationList = A5CF6A7221AA446F0086AFFC /* Build configuration list for PBXProject "GameCaro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5CF6A6E21AA446F0086AFFC;
+			productRefGroup = A5CF6A7821AA446F0086AFFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5CF6A7621AA446F0086AFFC /* GameCaro */,
+				A5CF6A8A21AA44700086AFFC /* GameCaroTests */,
+				A5CF6A9521AA44700086AFFC /* GameCaroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5CF6A7521AA446F0086AFFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C24C85229BCF3F001ADD6F /* Product.xcconfig in Resources */,
+				A5CF6AAB21AA44B40086AFFC /* CaroViewController.xib in Resources */,
+				A5CF6A8521AA446F0086AFFC /* LaunchScreen.storyboard in Resources */,
+				A5CF6ABC21AADDE40086AFFC /* MenuViewController.xib in Resources */,
+				A5CF6ABF21AAE38D0086AFFC /* camnang.mp3 in Resources */,
+				A5C24C84229BCF3F001ADD6F /* Staging.xcconfig in Resources */,
+				A5CF6AAF21AA46000086AFFC /* CaroCell.xib in Resources */,
+				A5CF6A8221AA446F0086AFFC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A8921AA44700086AFFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A9421AA44700086AFFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F51936645008D2D508B386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3A38E6EFC60629B364517F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821904228C6B7687EE4FDA9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameCaro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5C24C87229BE6CD001ADD6F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$CI\" == 'true' ]]; then\nexit 0\nfi\n\nif [[ -s \"${PODS_ROOT}/SwiftLint/swiftlint\" ]]; then\necho 'Linting...'\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\necho 'error: SwiftLint not installed, please read README first.'\nexit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5CF6A7321AA446F0086AFFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CF6AAE21AA46000086AFFC /* CaroCell.swift in Sources */,
+				A5CF6ABB21AADDE40086AFFC /* MenuViewController.swift in Sources */,
+				A5CF6A7B21AA446F0086AFFC /* AppDelegate.swift in Sources */,
+				A5CF6AAA21AA44B40086AFFC /* CaroViewController.swift in Sources */,
+				A5CF6AB621AACBC70086AFFC /* CaroCellViewModel.swift in Sources */,
+				A5CF6AB421AAC6040086AFFC /* CaroViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A8721AA44700086AFFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CF6A9021AA44700086AFFC /* GameCaroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5CF6A9221AA44700086AFFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CF6A9B21AA44700086AFFC /* GameCaroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5CF6A8D21AA44700086AFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5CF6A7621AA446F0086AFFC /* GameCaro */;
+			targetProxy = A5CF6A8C21AA44700086AFFC /* PBXContainerItemProxy */;
+		};
+		A5CF6A9821AA44700086AFFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5CF6A7621AA446F0086AFFC /* GameCaro */;
+			targetProxy = A5CF6A9721AA44700086AFFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5CF6A8321AA446F0086AFFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5CF6A8421AA446F0086AFFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5C24C75229BCCF7001ADD6F /* Debug-Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C24C7E229BCEF1001ADD6F /* Dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug-Dev";
+		};
+		A5C24C76229BCCF7001ADD6F /* Debug-Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71309815A8C7DCB277B09F17 /* Pods-GameCaro.debug-dev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = "$(SRCROOT)/GameCaro/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Dev";
+		};
+		A5C24C77229BCCF7001ADD6F /* Debug-Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8067150EFA1D4FF3BE2F0A7C /* Pods-GameCaroTests.debug-dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameCaro.app/GameCaro";
+			};
+			name = "Debug-Dev";
+		};
+		A5C24C78229BCCF7001ADD6F /* Debug-Dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A106D4AAC1CE4EC4C4ABEC5D /* Pods-GameCaroUITests.debug-dev.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameCaro;
+			};
+			name = "Debug-Dev";
+		};
+		A5C24C79229BCD3F001ADD6F /* Product */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C24C83229BCF3F001ADD6F /* Product.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Product;
+		};
+		A5C24C7A229BCD3F001ADD6F /* Product */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9653765D02239EC1F843856 /* Pods-GameCaro.product.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = "$(SRCROOT)/GameCaro/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Product;
+		};
+		A5C24C7B229BCD3F001ADD6F /* Product */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11095F1278DEF952E05115F1 /* Pods-GameCaroTests.product.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameCaro.app/GameCaro";
+			};
+			name = Product;
+		};
+		A5C24C7C229BCD3F001ADD6F /* Product */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B18BB8E038A811237EC18B /* Pods-GameCaroUITests.product.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameCaro;
+			};
+			name = Product;
+		};
+		A5CF6A9D21AA44700086AFFC /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C24C82229BCF3F001ADD6F /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		A5CF6AA021AA44700086AFFC /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098549998CE1D478660B6BCF /* Pods-GameCaro.staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = "$(SRCROOT)/GameCaro/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		A5CF6AA321AA44700086AFFC /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C17283D356B890987FD164 /* Pods-GameCaroTests.staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameCaro.app/GameCaro";
+			};
+			name = Staging;
+		};
+		A5CF6AA621AA44700086AFFC /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6839B42A5C268CCF7F23E448 /* Pods-GameCaroUITests.staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28R8NZSF4D;
+				INFOPLIST_FILE = GameCaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HaiNguyenHP.GameCaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameCaro;
+			};
+			name = Staging;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5CF6A7221AA446F0086AFFC /* Build configuration list for PBXProject "GameCaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5CF6A9D21AA44700086AFFC /* Staging */,
+				A5C24C75229BCCF7001ADD6F /* Debug-Dev */,
+				A5C24C79229BCD3F001ADD6F /* Product */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug-Dev";
+		};
+		A5CF6A9F21AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5CF6AA021AA44700086AFFC /* Staging */,
+				A5C24C76229BCCF7001ADD6F /* Debug-Dev */,
+				A5C24C7A229BCD3F001ADD6F /* Product */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug-Dev";
+		};
+		A5CF6AA221AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5CF6AA321AA44700086AFFC /* Staging */,
+				A5C24C77229BCCF7001ADD6F /* Debug-Dev */,
+				A5C24C7B229BCD3F001ADD6F /* Product */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug-Dev";
+		};
+		A5CF6AA521AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5CF6AA621AA44700086AFFC /* Staging */,
+				A5C24C78229BCCF7001ADD6F /* Debug-Dev */,
+				A5C24C7C229BCD3F001ADD6F /* Product */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug-Dev";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5CF6A6F21AA446F0086AFFC /* Project object */;
+}
