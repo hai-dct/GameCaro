@@ -29,7 +29,7 @@ final class CaroViewController: UIViewController {
     func playSound() {
         guard let url = Bundle.main.url(forResource: "camnang", withExtension: "mp3") else { return }
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playback,  mode: .default)
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
             player?.play()
@@ -81,15 +81,13 @@ extension CaroViewController: CaroViewModelDelegate {
     func viewModel(_ viewModel: CaroViewModel, needperform action: CaroViewModel.Action) {
         switch action {
         case .gameOver(let isWinner):
-            let action = UIAlertAction(title: "OK", style: .default) { [weak self] action in
+            let action = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
                 guard let this = self else { return }
                 this.navigationController?.popViewController(animated: true)
             }
             if isWinner {
                 let alert = UIAlertController(title: "You were win", message: nil, preferredStyle: .alert)
                 alert.addAction(action)
-
-
                 present(alert, animated: true, completion: nil)
             } else {
                 let alert = UIAlertController(title: "You were lose", message: nil, preferredStyle: .alert)

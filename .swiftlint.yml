@@ -12,7 +12,6 @@ opt_in_rules:
   - number_separator
   - object_literal
   - operator_usage_whitespace
-  - overridden_super_call
   - prohibited_super_call
   - redundant_nil_coalescing
 disabled_rules:

@@ -19,7 +19,7 @@ final class CaroCell: UICollectionViewCell {
             updateView()
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         configView()
