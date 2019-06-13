@@ -300,10 +300,10 @@
 			buildConfigurationList = A5CF6A9F21AA44700086AFFC /* Build configuration list for PBXNativeTarget "GameCaro" */;
 			buildPhases = (
 				821904228C6B7687EE4FDA9E /* [CP] Check Pods Manifest.lock */,
+				A5C24C87229BE6CD001ADD6F /* SwiftLint */,
 				A5CF6A7321AA446F0086AFFC /* Sources */,
 				A5CF6A7421AA446F0086AFFC /* Frameworks */,
 				A5CF6A7521AA446F0086AFFC /* Resources */,
-				A5C24C87229BE6CD001ADD6F /* SwiftLint */,
 			);
 			buildRules = (
 			);

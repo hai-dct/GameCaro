@@ -58,7 +58,6 @@ final class CaroViewModel {
 extension CaroViewModel {
 
     func viewModelForItem(at indexPath: IndexPath) -> CaroCellViewModel {
-        var i = 0
         let result = getColumAndRow(from: indexPath)
         let rawValue = data[result.row][result.column]
         guard let option = Option(rawValue: rawValue) else {

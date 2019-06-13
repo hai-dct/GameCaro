@@ -1,10 +1,12 @@
 before_install:
-    - rvm install ruby-2.5.0
-    - rvm use ruby-2.5.0 --default
-    - gem update --system
-    - gem install bundler
-    - bundle install
-    - bundle exec pod install --repo-update
+  - rvm install ruby-2.5.0
+  - rvm use ruby-2.5.0 --default
+  - gem update --system
+  - gem install bundler
+  - bundle install
+  - bundle exec pod install --repo-update
+  - gem install linterbot
+  - brew install swiftlint
 cache:
   - bundler
   - cocoapods
@@ -14,7 +16,8 @@ xcode_project: GameCaro.xcworkspace
 xcode_scheme: Dev
 xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
 script:
-    - xcodebuild clean build -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme GameCaro-DEV CODE_SIGNING_REQUIRED=NO
+  - xcodebuild clean build -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme GameCaro-DEV CODE_SIGNING_REQUIRED=NO
+  - ./scripts/linter
 install:
-    - set -o pipefail
-    - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
+  - set -o pipefail
+  - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
