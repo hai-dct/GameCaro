@@ -1,0 +1,107 @@
+default_platform(:ios)
+
+PRODUCT_NAME = 'GameCaro'
+
+CONFIGURATION_DEV = 'Debug'
+CONFIGURATION_PRO = 'Product'
+
+SCHEME_DEV = 'GameCaro-DEV'
+SCHEME_PRO = 'GameCaro-PRO'
+
+
+EXPORT_METHOD_ENT = 'enterprise'
+EXPORT_METHOD_DEV = 'development'
+EXPORT_METHOD_PRO = 'appstore'
+
+platform :ios do
+
+  desc "Make `build` Folder"
+  private_lane :make_build_folder do
+    sh "rm -rf ../build"
+    sh "mkdir -p ../build"
+  end
+
+  desc "Import certificate"
+  private_lane :config_cer_provision do |options|
+    import_certificate(
+      keychain_name: "ios-build.keychain",
+      keychain_password: "travis",
+      certificate_path: "#{options[:certificate_path]}",
+      certificate_password: "#{options[:certificate_password]}",
+    )
+
+    update_project_provisioning(
+      xcodeproj: "GameCaro.xcodeproj",
+      profile: "#{options[:profile]}",
+      target_filter: "#{options[:target_filter]}",
+      build_configuration: "#{options[:build_configuration]}"
+    )
+  end
+
+  desc "Build app with options"
+  private_lane :build_app_with do |options|
+    sh "echo #{@export_method}"
+    @ios_app_version = get_version_number(xcodeproj: "GameCaro.xcodeproj", target: "GameCaro", configuration: "#{options[:configuration]}")
+    @output_name = "GameCaro-#{options[:bundle_id]}-#{@ios_app_version} " + Time.now.strftime("%Y-%m-%d %H-%M-%S")
+    build_ios_app(
+      scheme: "#{options[:scheme]}",
+      workspace: "GameCaro.xcworkspace",
+      configuration: "#{options[:configuration]}",
+      clean: true,
+      silent: true,
+      output_directory: "./build",
+      output_name: "#{@output_name}.ipa",
+      skip_profile_detection: true,
+      export_method: "#{options[:exportmethod]}",
+      export_options: {
+        provisioningProfiles: { "#{options[:bundle_id]}": "#{options[:provisioning]}" }
+      }
+    )
+  end
+
+  desc "Create release notes"
+  private_lane :create_release_notes do |options|
+    sh "git log -1 --pretty=tformat:\"#{options[:format]}\" > release_notes.txt"
+  end
+
+  desc "Upload to DeployGate"
+  private_lane :upload_deploygate do
+    File.open('../fastlane/release_notes.txt').each do |line|
+        @releasenote = line
+        break
+    end
+    deploygate(
+      api_token: ENV["DEPLOYGATE_API_KEY"],
+      user: ENV["DEPLOYGATE_USER"],
+      ipa: lane_context[SharedValues::IPA_OUTPUT_PATH],
+      message: "#{@releasenote}"
+    )
+  end
+
+  desc "GameCaro-DEV: Deploy Dev Enviromment with Server Firebase"
+  lane :deploy_dev_gamecaro do
+    make_build_folder
+    disable_automatic_code_signing(
+      path: "GameCaro.xcodeproj"
+    )
+    config_cer_provision(
+      certificate_path: "./scripts/certs/dev.p12",
+      certificate_password: ENV["CERTIFICATE_PASSWORD_DEV"],
+      profile: "./scripts/certs/provisioning_app_testBuildFastLane_dev.mobileprovision",
+      target_filter: "GameCaro",
+      build_configuration: "DEV"
+    )
+    build_app_with(
+      scheme: SCHEME_DEV, 
+      configuration: CONFIGURATION_DEV, 
+      exportmethod: EXPORT_METHOD_DEV,
+      bundle_id: ENV["BUNDLE_ID_DEV"], 
+      provisioning: ENV["PROVISIONING_DEV"]
+    )
+    create_release_notes(format: 'GameCaro Dev: %h %s')
+    upload_deploygate
+    enable_automatic_code_signing(
+      path: "GameCaro.xcodeproj"
+    )
+  end
+end

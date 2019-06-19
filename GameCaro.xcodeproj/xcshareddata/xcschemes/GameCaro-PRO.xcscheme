@@ -26,8 +26,36 @@
       buildConfiguration = "Product"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A5CF6A7621AA446F0086AFFC"
+            BuildableName = "GameCaro.app"
+            BlueprintName = "GameCaro"
+            ReferencedContainer = "container:GameCaro.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A5CF6A8A21AA44700086AFFC"
+            BuildableName = "GameCaroTests.xctest"
+            BlueprintName = "GameCaroTests"
+            ReferencedContainer = "container:GameCaro.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5CF6A8A21AA44700086AFFC"
+               BuildableName = "GameCaroTests.xctest"
+               BlueprintName = "GameCaroTests"
+               ReferencedContainer = "container:GameCaro.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
