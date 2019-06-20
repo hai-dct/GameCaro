@@ -17,7 +17,7 @@ before_script:
   - sh ./scripts/add-key.sh
 script:
   - ./scripts/linter
-  - xcodebuild clean build -project GameCaro.xcodeproj -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme DEV
+  - xcodebuild clean build -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme DEV
   - if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
   - if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
   - if [[ "$TRAVIS_BRANCH" =~ "release"* && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
