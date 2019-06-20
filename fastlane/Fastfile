@@ -104,4 +104,18 @@ platform :ios do
       path: "GameCaro.xcodeproj"
     )
   end
+
+  desc "GameCaro-DEV: Deploy Dev Enviromment with Server Firebase"
+  lane :deploy_local_dev_gamecaro do
+    make_build_folder
+    build_app_with(
+      scheme: "GameCaro-DEV", 
+      configuration: "Debug", 
+      exportmethod: "development",
+      bundle_id: "com.bumios.testBuildFastLane", 
+      provisioning: "provisioning_app_testBuildFastLane_dev"
+    )
+    create_release_notes(format: 'GameCaro Dev: %h %s')
+    upload_deploygate
+  end
 end
