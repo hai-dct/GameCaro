@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios deploy_dev_gamecaro
 ```
 GameCaro-DEV: Deploy Dev Enviromment with Server Firebase
+### ios deploy_local_dev_gamecaro
+```
+fastlane ios deploy_local_dev_gamecaro
+```
+GameCaro-DEV: Deploy Dev Enviromment with Server Firebase
 
 ----
 
