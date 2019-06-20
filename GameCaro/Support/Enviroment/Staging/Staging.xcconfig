@@ -10,5 +10,5 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // App
-DISPLAY_NAME = [STG] GameCaro
-PRODUCT_BUNDLE_IDENTIFIER = com.lion.GameCaro
+DISPLAY_NAME = [STG] CaroMan
+PRODUCT_BUNDLE_IDENTIFIER = com.bumios.testBuildFastLane
