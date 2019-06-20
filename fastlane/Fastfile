@@ -5,7 +5,7 @@ PRODUCT_NAME = 'GameCaro'
 CONFIGURATION_DEV = 'Debug'
 CONFIGURATION_PRO = 'Product'
 
-SCHEME_DEV = 'GameCaro-DEV'
+SCHEME_DEV = 'DEV'
 SCHEME_PRO = 'GameCaro-PRO'
 
 
