@@ -10,14 +10,17 @@ cache:
 language: objective-c
 osx_image: xcode10
 xcode_project: GameCaro.xcworkspace
-xcode_scheme: GameCaro-Dev
+xcode_scheme: GameCaro-DEV
 xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
 before_script:
   - chmod +x ./scripts/add-key.sh
   - sh ./scripts/add-key.sh
 script:
   - ./scripts/linter
-  - bundle exec fastlane deploy_dev_gamecaro
+  # - xcodebuild clean build -sdk iphonesimulator -workspace GameCaro.xcworkspace -scheme GameCaro-DEV CODE_SIGNING_REQUIRED=NO
+  - if [[ "$TRAVIS_BRANCH" == "develop" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
+  - if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
+  - if [[ "$TRAVIS_BRANCH" =~ "release"* && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bundle exec fastlane deploy_dev_gamecaro; fi
 install:
   - set -o pipefail
   - sudo systemsetup -settimezone Asia/Ho_Chi_Minh
